@@ -1,57 +1,216 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>Koki Tamura</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <a href="#top">Koki Tamura </a> 
-            <nav>
-                <a href="about">About</a>
-                <a href="works">Works</a>
-            </nav>
-        </header>
-        <main>
-            <section id="top">
-                <img src="./media/写真.jpg" width="50%">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Koki Tamura | Portfolio</title>
+
+    <meta name="description"
+          content="Koki Tamura's personal portfolio website.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+
+        <a href="#top" class="logo">
+            KOKI<span>.</span>
+        </a>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#works">Works</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Top -->
+        <section id="top" class="hero">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    PORTFOLIO / 2026
+                </p>
+
                 <h1>
-                     Koki Tamura</br>
-                     portfolio
-               </h1>
-            </section>
-            <section id="about">  
-                <h3>About</h3>
-                <p>
-                    田村航基<br>
-                    東京都市大学デザイン・データ科学部    
+                    Koki<br>
+                    Tamura<span>.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Design, Creativity & Technology.
                 </p>
-                <p>
-                    生年月日　2006年4月24日<br>
-                    出身地　東京都西東京市<br>
-                    趣味　ライブ　映画鑑賞
+
+                <a href="#works" class="hero-button">
+                    VIEW MY WORKS ↘
+                </a>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img
+                    src="./media/写真.jpg"
+                    alt="Koki Tamura"
+                >
+
+                <p class="image-caption">
+                    CREATIVE PORTFOLIO
                 </p>
-            </section>
-            <section id="works">   
-                <h3>Works</h3>
-                <div class="works-controls">
-                    <select id="category">
-                        <option value="all">すべてのカテゴリ</option>      
-                    </select>
-                    <select id="sort">
-                       <option value="newest">新しい順</option>
-                       <option value="oldest">古い順</option>
-                       <option value="title">タイトル順</option>
-                    </select>
+
+            </div>
+
+            <div class="weather-box">
+                <span id="weather-icon">☀</span>
+                <span id="weather-text">Weather loading...</span>
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+        <section id="about" class="about section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">01 / ABOUT ME</p>
+
+                <h2>About<span>.</span></h2>
+
+            </div>
+
+            <div class="about-content">
+
+                <div class="about-intro">
+
+                    <h3>
+                        Hello, I'm Koki.
+                    </h3>
+
+                    <p>
+                        デザインとデータを通じて、
+                        新しい価値を生み出すことに興味があります。
+                        自分のアイデアを形にしながら、
+                        さまざまなことに挑戦しています。
+                    </p>
+
                 </div>
-                <div id="works-grid"></div>
-            </section>   
-        </main>
-        <footer>
-            <span>© 2026 Koki Tamura</span>
-        </footer> 
-        <script src="works.js"></script>  
-    </body>
+
+                <div class="profile-list">
+
+                    <div class="profile-item">
+                        <span>NAME</span>
+                        <p>田村 航基</p>
+                    </div>
+
+                    <div class="profile-item">
+                        <span>UNIVERSITY</span>
+                        <p>東京都市大学 デザイン・データ科学部</p>
+                    </div>
+
+                    <div class="profile-item">
+                        <span>BIRTHDAY</span>
+                        <p>2006.04.24</p>
+                    </div>
+
+                    <div class="profile-item">
+                        <span>FROM</span>
+                        <p>東京都西東京市</p>
+                    </div>
+
+                    <div class="profile-item">
+                        <span>HOBBIES</span>
+                        <p>ライブ・映画鑑賞</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Works -->
+        <section id="works" class="works section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">02 / MY PROJECTS</p>
+
+                <h2>Selected Works<span>.</span></h2>
+
+                <p class="section-description">
+                    これまでに制作した作品や活動を紹介します。
+                </p>
+
+            </div>
+
+
+            <!-- Search and Sort -->
+            <div class="works-controls">
+
+                <select id="category" aria-label="カテゴリで絞り込む">
+
+                    <option value="all">
+                        すべてのカテゴリ
+                    </option>
+
+                </select>
+
+                <select id="sort" aria-label="作品の並び替え">
+
+                    <option value="newest">
+                        新しい順
+                    </option>
+
+                    <option value="oldest">
+                        古い順
+                    </option>
+
+                    <option value="title">
+                        タイトル順
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Works Grid -->
+            <div id="works-grid" class="works-grid"></div>
+
+            <p id="works-message" class="works-message"></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <a href="#top" class="footer-logo">
+            KOKI<span>.</span>
+        </a>
+
+        <p>Thanks for visiting my portfolio.</p>
+
+        <span class="copyright">
+            © 2026 Koki Tamura
+        </span>
+
+    </footer>
+
+
+    <script src="works.js"></script>
+
+</body>
 </html>
