@@ -2,6 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>Koki Tamura</title>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -35,6 +36,16 @@
             </section>
             <section id="works">   
                 <h3>Works</h3>
+                <div class="works-controls">
+                    <select id="category">
+                        <option value="all">すべてのカテゴリ</option>      
+                    </select>
+                    <select id="sort">
+                       <option value="newest">新しい順</option>
+                       <option value="oldest">古い順</option>
+                       <option value="title">タイトル順</option>
+                    </select>
+                </div>
                 <div id="works-grid"></div>
             </section>   
         </main>
